@@ -1,0 +1,120 @@
+@media screen and (max-width: 767px){
+    .mobile-menu {
+            position: fixed;
+            z-index: 999;
+            width: 100%;
+            max-width: 767px;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: var(--white-background-colol);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: visibility 500ms linear, opacity 500ms linear;
+        }
+    
+        .mobile-menu.is-open {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+    
+    
+        }
+    
+        .mobile-menu__container {
+            position: relative;
+            padding-left: 40px;
+            padding-top: 48px;
+            padding-bottom: 48px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+    
+        }
+    
+        .mobile-menu__close-btn {
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            background-color: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+    
+            &:active {
+                fill: var(--axent-colour);
+            }
+        }
+    
+        .mobile-menu-list {
+            @include font(40px, var(--medium-font), 47px);
+            letter-spacing: 0.02em;
+        }
+    
+        .mobile-menu-list__item:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    
+        .mobile-menu-list__link {
+            text-decoration: none;
+            color: var(--primary-font-color);
+        }
+    
+        .mobile-menu-list__link_current {
+            color: var(--axent-colour);
+        }
+    
+        .mobile-info__tel {
+            @include font(31px, var(--medium-font), 40px);
+            letter-spacing: 0.02em;
+            margin-bottom: 32px;
+    
+        }
+    
+        .mobile-info__link {
+            text-decoration: none;
+            color: var(--axent-colour);
+        }
+    
+        .mobile-info__email {
+            @include font(24px, var(--medium-font), 28px);
+            letter-spacing: 0.02em;
+            margin-bottom: 64px;
+        }
+    
+        .mobile-info__email-link {
+            color: var(--secondary-font-color);
+            text-decoration: none;
+        }
+    
+        .mobile-info__social {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    
+        .mobile-info__item {
+            @include font(18px, var(--medium-font), 22px);
+            letter-spacing: 0.02em;
+        }
+    
+        .mobile-info__item:not(:last-child) {
+            margin-right: 10px;
+            border-right: 1px solid rgba(33, 33, 33, 0.2);
+            padding-right: 10px;
+        }
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-menu{
+        display: none;
+    }
+    
+}
+
+

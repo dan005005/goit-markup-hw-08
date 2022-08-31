@@ -1,0 +1,191 @@
+.footer {
+    background-color: #2f303a;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-logo {
+    color: var(--axent-colour);
+    margin-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    }
+
+.logo-footer__part {
+    color: var(--white-font-color);
+    }
+
+.address {
+    font-style: normal;
+    margin-top: 20px;
+    }
+.address__item:not(:last-child){
+    margin-bottom: 8px;
+}    
+
+.address__link {
+    @include font(14px, var(--normal-font), 24px);
+    letter-spacing: 0.03em;
+    color: var(--white-font-color);
+    text-decoration: none;
+    transition: color var(--transmition-time) var(--transition-function);
+
+    &:hover,
+    &:focus {
+        color: var(--axent-colour);
+    }
+}
+
+.address__email,
+.address__tel {
+    @include font(14px, var(--normal-font), 24px);
+    font-family: inherit;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color var(--transmition-time) var(--transition-function);
+
+    &:hover,
+    &:focus {
+        color: var(--axent-colour);
+    }
+}
+
+.social-footer__caption {
+    @include font(14px, var(--bold-font), 16.41px);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white-font-color);
+    margin-bottom: 20px;
+}
+
+.social-footer__list {
+    display: flex;
+    gap: 10px;
+}
+
+.social-footer__link {
+    @extend %align;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: #ffffff;
+    transition: background-color var(--transmition-time) var(--transition-function);
+
+    &:hover,
+    &:focus {
+        background-color: var(--axent-colour);
+    }
+} 
+
+.footer-offer__text {
+    @include font(14px, var(--bold-font), 16.41px);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white-font-color);
+    margin-bottom: 20px;
+}
+
+.email-input {
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 15px 16px;
+    color: var(--white-font-color);
+
+    &::placeholder {
+        font-style: var(--normal-font);
+        font-family: inherit;
+        @include font(14px, var(--normal-font), 20px);
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+
+
+.btn-footer {
+    padding: 6px 28px;
+    @extend %align;
+    @include font(16px, var(--bold-font), 30px);
+    letter-spacing: 0.06em;
+    background-color: var(--axent-colour);
+    color: var(--white-font-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-color: transparent;}
+
+
+.send-icon {
+    margin-left: 10px;
+    fill: #ffffff;
+}
+ @media screen and (max-width:767px){
+    .footer-container{
+        text-align: center;
+    }
+    .address-footer{
+        margin-bottom: 60px;
+    }
+    .footer-container--content{
+        margin-bottom: 60px;
+    }
+    .email-input {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .social-footer__list {
+        justify-content: center;
+    }
+    .btn-footer{
+       margin-left: auto;
+       margin-right: auto;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1199px){
+    .footer-container--content{
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        align-items: baseline;
+        margin-bottom: 60px;
+    }
+
+    .footer-offer__text{
+        text-align: center;
+    }
+    .footer-offer__form{
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+    }
+    .email-input {
+        margin-bottom: 20px;
+        width: 450px;
+        }
+    
+}
+
+@media screen and (min-width:1200px){
+    .footer-container{
+        display: flex;
+        align-items: baseline; justify-content: space-between;
+    }
+    .footer-container--content{
+        display: flex;
+        align-items: baseline;
+    }
+    .address-footer{
+        margin-right: 70px;
+    }
+    .footer-offer__form{
+        display: flex;
+    }
+    .email-input{
+        width: 358px;
+        margin-right: 12px;
+    }
+}

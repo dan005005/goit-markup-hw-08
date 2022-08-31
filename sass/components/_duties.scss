@@ -1,0 +1,43 @@
+.section--no-padding-top {
+    padding-top: 0;
+}
+
+
+
+.duties {
+    display: flex;
+}
+
+
+
+.duties__item {
+    flex-basis: calc((100% - 60px)/3);
+    &:not(:last-child) {
+            margin-right: 30px;
+        }
+}
+
+.duties__info {
+    position: relative;
+}
+
+.duties__caption {
+    @include font(14px, var(--bold-font), 16.41px);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white-font-color);
+    background: rgba(47, 48, 58, 0.8);
+    height: 70px;
+    @extend %align;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 370px;
+}
+
+@media screen and (max-width: 1199px){
+ .section--display-none{
+    display: none;
+ }
+}
+    
